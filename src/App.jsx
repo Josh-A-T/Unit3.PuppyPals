@@ -19,7 +19,7 @@ function App() {
       ))}
       {featCatId && featuredCat && (
         <div>
-          <h2>{featuredCat.name}</h2>
+          <h1>{featuredCat.name}</h1>
           <img
             src={featuredCat.image || "https://placehold.co/150"} // Default image
             alt={`${featuredCat.name}'s picture`}

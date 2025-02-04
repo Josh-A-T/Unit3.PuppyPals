@@ -42,10 +42,12 @@ export const catList = [
     name: "Van",
     email: "miniVan@email.com",
     isCute: true,
-    age: 14,
+    age: 16,
     ownerId: 2,
     image: vanImage,
-    tricks: [],
+    tricks: [
+      {id: 2, title: "Sentient ragdoll"}
+    ],
   },
   {
     id: 4,
@@ -55,17 +57,21 @@ export const catList = [
     age: 16,
     ownerId: 2,
     image: valImage,
-    tricks: [],
+    tricks: [
+      {id:2, title: "Outliving everyone else"}
+    ],
   },
   {
     id: 5,
     name: "Captain Fuzz",
     email: "capn-fzz@email.com",
     isCute: true,
-    age: 16,
+    age: 14,
     ownerId: 3,
     image: fuzzImage,
-    tricks: [],
+    tricks: [
+      {id: 2, title: "Lick (licked a bald spot in our carpet one night)"}
+    ],
   },
   {
     id: 6,
