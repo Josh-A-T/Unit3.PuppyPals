@@ -1,31 +1,36 @@
-import { puppyList } from "./data.js";
+import { catList } from "./data.js";
 import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [puppies, setPuppies] = useState(puppyList);
-  const [featPupId, setFeatPupId] = useState(null);
+  const [kitties, setKitties] = useState(catList);
+  const [featCatId, setFeatCatId] = useState(null);
 
-  const handleClick = (puppyId) => {
-    setFeatPupId(puppyId);
+  const handleClick = (catId) => {
+    setFeatCatId(catId);
   };
-  const featuredPup = puppies.find((pup) => pup.id === featPupId);
+  const featuredCat = kitties.find((cat) => cat.id === featCatId);
   return (
     <div className="App">
-      {puppies.map((puppy) => (
-        <p onClick={() => handleClick(puppy.id)} key={puppy.id}>
-          {puppy.name}
+      {kitties.map((cat) => (
+        <p onClick={() => handleClick(cat.id)} key={cat.id}>
+          {cat.name}
         </p>
       ))}
-      {featPupId && featuredPup && (
+      {featCatId && featuredCat && (
         <div>
-          <h2>{featuredPup.name}</h2>
+          <h2>{featuredCat.name}</h2>
+          <img
+            src={featuredCat.image || "https://placehold.co/150"} // Default image
+            alt={`${featuredCat.name}'s picture`}
+            style={{ width: "150px", height: "150px", objectFit: "cover" }}
+          />
           <ul>
-            <li>Age: {featuredPup.age}</li>
-            <li>Email: {featuredPup.email}</li>
+            <li>Age: {featuredCat.age}</li>
+            <li>Email: {featuredCat.email}</li>
             Tricks:
             <ul>
-              {featuredPup.tricks.map((trick) => (
+              {featuredCat.tricks.map((trick) => (
                 <li key={trick.id}>{trick.title}</li>
               ))}
             </ul>
