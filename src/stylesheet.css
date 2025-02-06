@@ -110,6 +110,9 @@ a {
 p {
   text-align:justify;
 }
+li {
+  list-style-type: none;
+}
 
 .title {
   font-size: 4rem;
@@ -353,6 +356,10 @@ footer {
 }
 .content-section {
   margin-bottom: 3rem;
+}
+.app-container {
+  display: flex;
+  height: 100vh; /* Full screen height */
 }
 
 /* Set up the code block styling*/
